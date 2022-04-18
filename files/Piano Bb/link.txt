@@ -1,2 +1,0 @@
-link:https://samplefocus.com/samples/piano-bb
-license: public domain
