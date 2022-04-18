@@ -1,0 +1,18 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## list_branches
+##
+
+if [ $# -eq 1 ]
+then
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "List all the branches of the current repository"
+        echo "Call: $0"
+    fi
+else
+    git branch -a
+fi

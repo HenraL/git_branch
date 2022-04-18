@@ -1,0 +1,61 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## merge_branch
+##
+
+TRUE=1
+FALSE=0
+
+function how_to_display_help() {
+    echo "Enter: $0 -h for help"
+}
+
+function display_help() {
+    arg1=$1
+    if [ $arg1 == "-h" ] || [ $arg1 == "-H" ] || [ $arg1 == "--help" ] || [ $arg1 == "--HELP"]
+    then
+        echo "Merge a branch"
+        echo "Call $0 <current_branch> <branch_to_merge> to run the command"
+        echo "PS: The two branches must be on the same remote and the branches have to be different"
+        echo "Use change_branch to change the current branch"
+    else
+        if [ $arg1 != "main" ]
+        then
+            git checkout "$arg1"
+            git merge "$arg1"
+        else
+            how_to_display_help
+        fi
+    fi
+}
+
+function run_program() {
+    arg1=$1
+    arg2=$2
+    if [ $arg1 == "-h" ] || [ $arg1 == "-H" ] || [ $arg1 == "--help" ] || [ $arg1 == "--HELP"]
+    then
+        display_help $arg1
+    elif [ $arg1 == $arg2 ]
+    then
+        echo "A branch cannot be merged with itself!"
+    else
+        git checkout $arg1
+        git merge $arg2
+    fi
+}
+
+if [ $# -eq 0 ]
+then
+    how_to_display_help
+elif [ $# -eq 1 ]
+then
+    display_help $1
+elif [ $# -eq 2 ]
+then
+    run_program "$1" "$2"
+else
+    how_to_display_help
+fi

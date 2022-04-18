@@ -1,0 +1,36 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## list_branches
+##
+
+TRUE=1
+FALSE=0
+
+function display_help() {
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "Create a branch"
+        echo "Call $0 <branch_name> to run the command"
+    else
+        search_local_branch_by_commit $1
+        search_remote_branch_by_commit $1
+    fi
+}
+
+if [ $# -eq 0 ]
+then
+    echo "Enter $0 -h for help"
+elif [ $# -eq 1 ]
+then
+    display_help $1
+elif [ $# -eq 2 ]
+then
+    search_local_branch_by_commit $1 $2
+    search_remote_branch_by_commit $1 $2
+else
+    echo "Please enter the commit you wish to search for in the branches."
+fi
+echo "(c) Created by Henry Letellier"

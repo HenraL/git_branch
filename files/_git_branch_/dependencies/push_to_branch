@@ -1,0 +1,16 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## push_to_branch
+##
+
+if [ $# -eq 2 ]
+then
+    git add .
+    git commit -m "$2"
+    git push -u "$1"
+else
+    echo "Usage: $0 <branch> <commit_message>"
+fi

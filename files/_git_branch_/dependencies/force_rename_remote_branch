@@ -1,0 +1,22 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts - rename_branch
+## File description:
+## jitter jitter
+##
+
+if [ $# -eq 1 ]
+then
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "Rename branches"
+        echo "Call $0 <current_name> <new_name> to run the command"
+    fi
+elif [ $# -eq 2 ]
+then
+    git branch -r -M "$1" "$2"
+else
+    echo "Rename a branch"
+    echo "Enter: $0 -h for help"
+fi

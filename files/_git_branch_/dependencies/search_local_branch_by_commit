@@ -1,0 +1,93 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## list_branches
+##
+
+TRUE=1
+FALSE=0
+
+function check_if_nb() {
+    var_to_check = $1
+    for i in {0..10}
+    do
+        if [ $var_to_check =~ $i ]
+        then
+            return TRUE
+        fi
+    done
+    return FALSE
+}
+
+if [ $# -eq 0 ]
+then
+    echo "Enter $0 -h for help"
+elif [ $# -eq 1 ]
+then
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "List branches containing or not a specific commit."
+        echo "Call $0 <a> <b> to run the command"
+        echo "<b>: The commit you are using for the comparison"
+        echo "<a>: number from 1 to 4 (included)"
+        echo "If the number is 1, display the branches containing the "
+        echo "researched commit"
+        echo "If the number is 2, display the branches that do not "
+        echo "contain the researched commit"
+        echo "If the number is 3, display the branches that are merged and"
+        echo "contain the researched commit"
+        echo "If the number is 4, display the branches that are not merged"
+        echo "and contain the researched commit"
+        echo "The second argument is the commit you are looking for."
+    else
+        git branch --contains $1
+    fi
+elif [ $# -eq 2 ]
+then
+    check_if_nb $1
+    nb1_is_nb=$?
+    check_if_nb $2
+    nb2_is_nb=$?
+
+    if [ [ $1 -eq 1 ] && [ $nb2_is_nb == FALSE ] ]
+    then
+        git branch --contains $2
+    elif [ [ $2 -eq 1 ]  && [ $nb1_is_nb == FALSE ] ]
+    then
+        git branch --contains $1
+    elif [ [ $1 -eq 2 ] && [ $nb2_is_nb == FALSE ] ]
+    then
+        git branch --no-contains $2
+    elif [ [ $2 -eq 2 ]  && [ $nb1_is_nb == FALSE ] ]
+    then
+        git branch --no-contains $1
+    elif [ [ $1 -eq 3 ] && [ $nb2_is_nb == FALSE ] ]
+    then
+        git branch --merged $2
+    elif [ [ $2 -eq 3 ]  && [ $nb1_is_nb == FALSE ] ]
+    then
+        git branch --merged $1
+    elif [ [ $1 -eq 4 ] && [ $nb2_is_nb == FALSE ] ]
+    then
+        git branch --no-merged $2
+    elif [ [ $2 -eq 4 ]  && [ $nb1_is_nb == FALSE ] ]
+    then
+        git branch --no-merged $1
+    else
+        echo "Please enter 1, 2, 3 or 4 in the first argument"
+        echo "Option 1 is to display the branches containing the "
+        echo "researched commit"
+        echo "Option 2 is to display the branches that do not "
+        echo "contain the researched commit"
+        echo "Option 3 is to display the branches that are merged and"
+        echo "contain the researched commit"
+        echo "Option 4 is to display the branches that are not merged"
+        echo "and contain the researched commit"
+        echo "The second argument is the commit you are looking for."
+    fi
+else
+    echo "Please enter the commit you wish to search for in the branches."
+fi
+echo "(c) Created by Henry Letellier"

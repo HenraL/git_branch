@@ -1,0 +1,20 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## list_branches
+##
+
+if [ $# -eq 1 ]
+then
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "List the repository branches stored localy on your machine"
+        echo "Call $0 to run the command"
+    else
+        echo "Enter $0 -h for help"
+    fi
+else
+    git branch -l
+fi

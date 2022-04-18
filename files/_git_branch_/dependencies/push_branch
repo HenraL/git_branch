@@ -1,0 +1,24 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts
+## File description:
+## push_branch
+##
+
+function display_help() {
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "Push a branch to the current repository"
+        echo "Call $0 <branch_name> to run the command"
+    else
+        git push origin "$1"
+    fi
+}
+
+if [ $# -eq 1 ] #2
+then
+    display_help "$1"
+else
+    echo "Usage: $0 <branch> " #<commit_message>
+fi

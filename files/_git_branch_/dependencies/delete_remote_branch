@@ -1,0 +1,22 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts - delete_branch
+## File description:
+## jitter jitter
+##
+
+if [ $# -eq 1 ]
+then
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "Delete a branch from the repository"
+        echo "Call $0 <branch_name> to run the command"
+    else
+        git branch -r -d "$1"
+    fi
+else
+    echo "Please enter the branche you wish to delete."
+    echo "Syntax: $0 <branch_name>"
+fi
+echo "(c) Created by Henry Letellier"

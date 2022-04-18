@@ -1,0 +1,26 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## git_branch (Workspace)
+## File description:
+## install_program.sh
+##
+
+echo "Welcome to the install_program.sh script"
+echo "This script will install the program _git_branch_ onto your computer"
+
+# echo "It will create a folder _git_branch_ and download the program"
+# echo "It will also create a file _git_branch_/dependencies/install_prog/install_program.sh"
+# echo "This file will be used to install the program"
+# echo "If you want to install the program, just run the file"
+# echo "If you want to install the dependencies, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies and the program, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies and the program, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies and the program, run the file dependencies/install_prog/install_program.sh"
+# echo "If you want to install the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies and the program and the dependencies, run the file dependencies/install_prog/install_program.sh"

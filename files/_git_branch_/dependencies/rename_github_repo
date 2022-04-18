@@ -1,0 +1,18 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## git_branch (Workspace)
+## File description:
+## rename_github_repo
+##
+
+function display_help() {
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "Rename your github repository"
+        echo "Call $0 <new_name> to run the command"
+    else
+        # git remote rename origin "$1"
+        # git remote set-url origin
+
+}
