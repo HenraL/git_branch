@@ -1,0 +1,30 @@
+#!/bin/bash
+##
+## EPITECH PROJECT, 2021
+## my_scripts - create_push_and_change
+## File description:
+## jitter jitter
+##
+
+function display_help() {
+    if [ $1 == "-h" ] || [ $1 == "-H" ] || [ $1 == "--help" ] || [ $1 == "--HELP"]
+    then
+        echo "Create and push a branch"
+        echo "Call $0 <branch_name> to run the command"
+        echo "This script will create a branch, push the branch to github and change to it"
+        echo "Use the create_and_change script if this is what you want"
+    else
+        git branch "$1"
+        git push origin "$1"
+        git checkout "$1"
+    fi
+}
+
+if [ $# -eq 1 ]
+then
+    display_help "$1"
+else
+    echo "Please enter the branche you wish to create."
+    echo "Syntax: $0 <branch_name_to_create>"
+fi
+echo "(c) Created by Henry Letellier"

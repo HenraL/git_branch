@@ -1,6 +1,8 @@
 change_branch
 create_and_change
+create_and_push
 create_branch
+create_push_and_change
 delete_local_branch
 delete_remote_branch
 force_delete_local_branch

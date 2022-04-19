@@ -166,6 +166,18 @@ full_commands["sralbbc"]="search_remote_and_local_branch_by_commit"
 full_commands["s_r_a_l_b_b_c"]="search_remote_and_local_branch_by_commit"
 full_commands["sereanlobrbyco"]="search_remote_and_local_branch_by_commit"
 full_commands["se_re_an_lo_br_by_co"]="search_remote_and_local_branch_by_commit"
+# create and push command
+full_commands["create_and_push"]="create_and_push"
+full_commands["cap"]="create_and_push"
+full_commands["c_a_p"]="create_and_push"
+full_commands["cranpu"]="create_and_push"
+full_commands["cr_an_pu"]="create_and_push"
+# search remote and local branch by commit command
+full_commands["create_push_and_change"]="create_push_and_change"
+full_commands["cpacs"]="create_push_and_change"
+full_commands["c_p_a_c"]="create_push_and_change"
+full_commands["crpuanch"]="create_push_and_change"
+full_commands["cr_pu_an_ch"]="create_push_and_change"
 
 # "merge_branch"
 # "create_branch"
