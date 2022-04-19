@@ -11,19 +11,19 @@ __Program_Name__ = "Git Branch"
 
 import platform, sys
 
-Current_OS = platform.system()
+current_os = platform.system()
 
 # Color class related vars
-colorise_Output = True
+colorise_output = True
 # The final reference created depending on if you are unser windows or not
-Color_Pallet = dict()
+colour_pallet = dict()
 default_background = '0'
 default_foreground = 'A'
 windows_colour_command = "color "
 non_windows_colour_command = "echo -e "
 # Windows Color pallet (+ r (equivalent to a 'color AA'))
 options_for_colour_pallet = "042615378CAE9DBFr"
-options_for_testing_color_pallet = "0123456789ABCDEFr"
+options_for_testing_colour_pallet = "0123456789ABCDEFr"
 non_windows_colours = []
 # Create colour list
 for i in range(30,38):

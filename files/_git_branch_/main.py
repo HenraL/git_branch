@@ -162,19 +162,27 @@ class Git_Branch:
         if "-nc" in self.argv or "--no-color" in self.argv or "--no-colour" in self.argv:
             self.ci.no_color = True
 
+    def test_output(self) -> None:
+        """ Check if the program has successfully run """
+        if "test" in self.argv or "-test" in self.argv or "--test" in self.argv or "-t" in self.argv:
+            self.keep_running = False
+            self.ci.Display('A0')
+            print("Test successful")
+
     def main(self) -> None:
         """ The main function of the program """
         self.needs_no_colour()
         self.ci.init_pallet()
+        self.test_output()
         self.ci.Display('0A')
-        if self.system == 'Windows':
+        if self.system == 'Windows' and self.keep_running == True:
             print("This program has not been created for windows systems.")
             print("Therefore, you might experience some difficulties while using it")
-        if self.argc == 2:
+        if self.argc == 2 and self.keep_running == True:
             self.keep_running = False
             self.ci.Display("0E")
             self.get_full_command(self.argv[1])
-        elif self.argv > 2:
+        elif self.argc > 2:
             self.keep_running = False
             self.ci.Display("0B")
             self.get_first_part_of_the_command(self.argv[1], self.list_to_string(self.argv[2:self.argc-1]))

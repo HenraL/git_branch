@@ -1,0 +1,10 @@
+*.sh
+*.pyc
+*.spec
+create_and_trim
+files/_git_branch_/side_code/*
+files/_git_branch_/unknow_code/*
+files/_git_branch_/__pycache__/*
+files/_git_branch_/compilation/*
+files/_git_branch_/src/__pycache__/*
+#  42 files changed, 914110 insertions(+), 2 deletions(-)

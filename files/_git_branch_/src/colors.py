@@ -18,14 +18,14 @@ class Color:
     def __init__(self, My_Globals) -> None:
         """ passing the globals the class needs """
         self.version = 5.0
-        self.Current_OS = My_Globals.Current_OS
-        self.Color_Pallet = My_Globals.Color_Pallet
-        self.Windows_Color_Command = My_Globals.Windows_Color_Command
-        self.non_windows_colour_command = My_Globals.Non_Windows_Color_Command
-        self.colorise_output = My_Globals.Colorise_Output
-        self.opts_color_pallet = My_Globals.Options_For_Color_Pallet
-        self.opts_for_testing_color_pallet = My_Globals.Options_for_testing_Color_Pallet
-        self.non_windows_colours = My_Globals.Non_Windows_Colors
+        self.Current_OS = My_Globals.current_os
+        self.Color_Pallet = My_Globals.colour_pallet
+        self.Windows_Color_Command = My_Globals.windows_colour_command
+        self.non_windows_colour_command = My_Globals.non_windows_colour_command
+        self.colorise_output = My_Globals.colorise_output
+        self.opts_color_pallet = My_Globals.options_for_colour_pallet
+        self.opts_for_testing_color_pallet = My_Globals.options_for_testing_colour_pallet
+        self.non_windows_colours = My_Globals.non_windows_colours
         self.default_background = My_Globals.default_background
         self.default_foreground = My_Globals.default_foreground
         self.current_foreground = self.default_foreground
