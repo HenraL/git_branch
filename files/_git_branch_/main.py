@@ -148,7 +148,10 @@ class Git_Branch:
 
     def run_command(self, usr_input, arguments):
         """ Run the corresponding command """
-        os.system(f"{self.full_commands[usr_input.lower()]}{arguments}")
+        command=self.full_commands[usr_input.lower()]
+        if isinstance(command, str) is False:
+            return 1
+        os.system(f"{command}{arguments}")
 
     def list_to_string(self, list_name:list) -> str:
         """ Convert a list to a string """
